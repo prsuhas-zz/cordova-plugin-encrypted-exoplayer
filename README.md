@@ -1,2 +1,2 @@
-# cordova-plugin-offline-streaming
-Offline Streaming Cordova Plugin
+cordova-plugin-encrypted-exoplayer
+Encrypted Exoplayer Plugin

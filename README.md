@@ -1,2 +1,2 @@
-cordova-plugin-encrypted-exoplayer
+#cordova-plugin-encrypted-exoplayer
 Encrypted Exoplayer Plugin

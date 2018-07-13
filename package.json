@@ -1,0 +1,20 @@
+{
+  "name": "cordova-plugin-encrypted-exoplayer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "Encrypted Exoplayer Plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prsuhas/cordova-plugin-encrypted-exoplayer.git"
+  },
+  "keywords": [
+    "cordova android",
+    "encrypted exoplayer"
+  ],
+  "author": "Suhas P R",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prsuhas/cordova-plugin-encrypted-exoplayer/issues"
+  },
+  "homepage": "https://github.com/prsuhas/cordova-plugin-encrypted-exoplayer#readme"
+}

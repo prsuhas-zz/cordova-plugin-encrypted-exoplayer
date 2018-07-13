@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-encrypted-exoplayer"
+    version="1.0.2">
+    <name>Encrypted Exoplayer</name>
+    <description>Encrypted Exoplayer Plugin</description>
+    <author>Suhas P R</author>
+    <license>MIT</license>
+    <keywords>cordova android,encrypted exoplayer</keywords>
+    <repo>https://github.com/prsuhas/cordova-plugin-encrypted-exoplayer.git</repo>
+    <issue>https://github.com/prsuhas/cordova-plugin-encrypted-exoplayer/issues</issue>
+
+    <engines>
+        <engine name="cordova" version=">=6.0.0"/>
+    </engines>
+
+    <js-module src="www/EncryptedExoplayer.js" name="EncryptedExoplayer">
+      <clobbers target="EncryptedExoplayer" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+      <framework src="src/android/exoplayer.gradle" custom="true" type="gradleReference" />
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="EncryptedExoplayer">
+          <param name="android-package" value="com.prsuhas.encryptedexoplayer.EncryptedExoplayer" />
+        </feature>
+      </config-file>
+
+      <config-file target="AndroidManifest.xml" parent="/manifest">
+	      <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+      </config-file>
+
+      <source-file src="src/android/com/prsuhas/cordova/plugins/encryptedexoplayer/EncryptedExoplayer.java" target-dir="src/com/prsuhas/cordova/plugins/encryptedexoplayer" />
+      <source-file src="src/android/com/prsuhas/cordova/plugins/encryptedexoplayer/ExoplayerActivity.java" target-dir="src/com/prsuhas/cordova/plugins/encryptedexoplayer" />
+      <source-file src="src/android/com/prsuhas/cordova/plugins/encryptedexoplayer/EncryptedFileDataSource.java" target-dir="src/com/prsuhas/cordova/plugins/encryptedexoplayer" />
+      <source-file src="src/android/com/prsuhas/cordova/plugins/encryptedexoplayer/EncryptedFileDataSourceFactory.java" target-dir="src/com/prsuhas/cordova/plugins/encryptedexoplayer" />
+    </platform>    
+</plugin>

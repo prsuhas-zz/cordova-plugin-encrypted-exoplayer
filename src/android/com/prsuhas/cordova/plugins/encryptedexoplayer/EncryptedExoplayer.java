@@ -114,7 +114,7 @@ public class EncryptedExoplayer extends CordovaPlugin {
 
                     // Remove unencrypted video file
                     try{
-                        File unEncryptedFile = new File(Uri.parse(videoFile));
+                        File unEncryptedFile = new File(Uri.parse(videoFile).toString());
                         unEncryptedFile.delete();
                     }catch(Exception e){
                         e.printStackTrace();

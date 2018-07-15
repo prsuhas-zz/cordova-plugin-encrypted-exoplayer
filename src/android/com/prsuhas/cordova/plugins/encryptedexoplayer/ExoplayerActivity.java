@@ -74,7 +74,12 @@ public class ExoplayerActivity extends Activity {
         Bundle b = getIntent().getExtras();
         mVideoUri = b.getString("videoUri");        
         key = b.getString("key").getBytes();
-        iv = getKeyBytes(key);
+        
+        try {
+            iv = getKeyBytes(key);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         RelativeLayout relLayout = new RelativeLayout(this);
         relLayout.setBackgroundColor(Color.BLACK);

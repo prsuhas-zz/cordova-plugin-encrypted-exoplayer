@@ -72,9 +72,7 @@ public class EncryptedExoplayer extends CordovaPlugin {
         } else {
             callbackContext.error("EncryptedExoplayer." + action + " is not a supported method.");
             return false;
-        }
-
-        return false;
+        }        
     }
 
     private static byte[] getKeyBytes(final byte[] key) throws Exception {
@@ -87,11 +85,15 @@ public class EncryptedExoplayer extends CordovaPlugin {
         key = new byte[16];
         iv = new byte[16];
 
-        key = mKey.getBytes();
-        iv = getKeyBytes(key);
+        try{
+            key = mKey.getBytes();
+            iv = getKeyBytes(key);
 
-        mSecretKeySpec = new SecretKeySpec(key, AES_ALGORITHM);
-        mIvParameterSpec = new IvParameterSpec(iv);        
+            mSecretKeySpec = new SecretKeySpec(key, AES_ALGORITHM);
+            mIvParameterSpec = new IvParameterSpec(iv);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
 
         cordova.getThreadPool().execute(new Runnable() {
             public void run() {

@@ -1,8 +1,14 @@
 {
   "name": "cordova-plugin-encrypted-exoplayer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "description": "Encrypted Exoplayer Plugin",
+  "cordova": {
+    "id": "cordova-plugin-encrypted-exoplayer",
+    "platforms": [
+      "android"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/prsuhas/cordova-plugin-encrypted-exoplayer.git"

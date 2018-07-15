@@ -25,7 +25,7 @@
       <framework src="src/android/exoplayer.gradle" custom="true" type="gradleReference" />
       <config-file target="res/xml/config.xml" parent="/*">
         <feature name="EncryptedExoplayer">
-          <param name="android-package" value="com.prsuhas.encryptedexoplayer.EncryptedExoplayer" />
+          <param name="android-package" value="com.prsuhas.cordova.plugins.encryptedexoplayer.EncryptedExoplayer" />
         </feature>
       </config-file>
 

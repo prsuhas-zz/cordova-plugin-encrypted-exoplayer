@@ -3,6 +3,7 @@ package com.prsuhas.cordova.plugins.encryptedexoplayer;
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.util.Log;
 import android.content.Intent;
 import android.view.SurfaceView;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -35,9 +37,9 @@ import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
-import com.prsuhas.cordova.plugins.encryptedexoplayer.DownloadAndEncryptFileTask;
-
-public class ExoplayerActivity extends Activity implements VideoEncryptComplete {
+public class ExoplayerActivity extends Activity {
+    private static final String TAG = "EncryptedExoplayer";
+    
     public static final String AES_ALGORITHM = "AES";
     public static final String AES_TRANSFORMATION = "AES/CTR/NoPadding";
     

@@ -11,7 +11,11 @@ import org.json.JSONObject;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.util.Log;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
@@ -19,6 +23,7 @@ import javax.crypto.spec.SecretKeySpec;
 import javax.crypto.CipherOutputStream;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -115,11 +120,11 @@ public class EncryptedExoplayer extends CordovaPlugin {
                         e.printStackTrace();
                     }                    
 
-                    this.callbackContext.success("File successfully encrypted.");
+                    callbackContext.success("File successfully encrypted.");
 
                 } catch (Exception e) {
                     e.printStackTrace();
-                    this.callbackContext.error(e.getMessage());
+                    callbackContext.error(e.getMessage());
                 }
             }
         });
@@ -127,7 +132,7 @@ public class EncryptedExoplayer extends CordovaPlugin {
         return true;
     }
 
-    private boolean play(final Class activityClass, final String videoUri, final String key) {
+    private boolean playVideo(final Class activityClass, final String videoUri, final String key) {
         final CordovaInterface cordovaObj = cordova;
         final CordovaPlugin plugin = this;
 

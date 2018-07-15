@@ -12,7 +12,7 @@ var EncryptedExoplayer = {
   encrypt: function (filePath, key, success, error) {
     exec(success, error, PLUGIN_NAME, 'encrypt', [filePath, outputPath, key]);
   },
-  play: function (filePath, key, serverAddr, port, success, error) {
+  play: function (filePath, key, success, error) {
     exec(success, error, PLUGIN_NAME, 'play', [filePath, key]);
   },
 };

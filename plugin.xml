@@ -3,7 +3,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-encrypted-exoplayer"
-    version="1.0.0">
+    version="1.0.1">
     <name>Encrypted Exoplayer</name>
     <description>Encrypted Exoplayer Plugin</description>
     <author>Suhas P R</author>
@@ -17,7 +17,7 @@
     </engines>
 
     <js-module src="www/EncryptedExoplayer.js" name="EncryptedExoplayer">
-      <clobbers target="EncryptedExoplayer" />
+      <clobbers target="encryptedExoplayer" />
     </js-module>
 
     <!-- android -->

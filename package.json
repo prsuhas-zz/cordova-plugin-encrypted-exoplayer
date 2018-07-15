@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-encrypted-exoplayer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "description": "Encrypted Exoplayer Plugin",
   "repository": {
